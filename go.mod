@@ -1,6 +1,7 @@
 module github.com/libp2p/zeroconf/v2
 
-go 1.20
+go 1.21
+
 
 require (
 	github.com/miekg/dns v1.1.43
