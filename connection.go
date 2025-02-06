@@ -2,6 +2,7 @@ package zeroconf
 
 import (
 	"fmt"
+	"github.com/wlynxg/anet"
 	"net"
 
 	"golang.org/x/net/ipv4"
@@ -102,7 +103,7 @@ func joinUdp4Multicast(interfaces []net.Interface) (*ipv4.PacketConn, error) {
 
 func listMulticastInterfaces() []net.Interface {
 	var interfaces []net.Interface
-	ifaces, err := net.Interfaces()
+	ifaces, err := anet.Interfaces()
 	if err != nil {
 		return nil
 	}
